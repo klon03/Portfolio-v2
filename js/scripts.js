@@ -1,6 +1,17 @@
 // Year
 document.getElementById('year').innerHTML = new Date().getFullYear();
 
+// Preventing line breaking with single or double letters
+function replaceShortWords() {
+  document.querySelectorAll('*').forEach(el => {
+      Array.from(el.childNodes).filter(n => n.nodeType === Node.TEXT_NODE).forEach(n => {
+      n.nodeValue = n.nodeValue.replace(/ ([a-zA-Z]{1,2}) /g, ` $1\u00A0`);
+      n.nodeValue = n.nodeValue.replace(/([\u2014\u2013\u2010-]) /g, `$1\u00A0`);
+      });
+  });
+}
+replaceShortWords();
+
 // Contact section
 const emailDiv = document.getElementById("contact-email")
 const linkedinDiv = document.getElementById("contact-linkedin")
@@ -122,26 +133,3 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Swiper
-// var swiper = new Swiper(".swiper", {
-//   effect: "coverflow",
-//   grabCursor: true,
-//   centeredSlides: true,
-//   slidesPerView: "auto",
-//   speed: 700,
-//   //loop: true,
-//   coverflowEffect: {
-//     rotate: 50,
-//     stretch: 0,
-//     depth: 100,
-//     modifier: 1,
-//     slideShadows: true
-//   },
-//   pagination: {
-//     el: ".swiper-pagination"
-//   },
-//   autoplay: {
-//     delay: 5000,
-//     pauseOnMouseEnter: true
-//   }
-// });

@@ -162,9 +162,10 @@ $linkImage = '
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Kajetan Wachowski</title>
-    <meta name="description" content="Free Web tutorials">
+    <meta name="description" content="Ambitny student informatyki aspirujący w kierunku tworzenia aplikacji i systemów internetowych z naciskiem na backend.">
     <meta name="keywords" content="Webdev, Web developer, PHP, student, Kajetan, Wachowski">
     <meta name="author" content="Kajetan Wachowski">
+    <meta property="og:image" content="https://kwachowski.pl/img/profile.webp" />
 
     <!-- Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -271,32 +272,32 @@ $linkImage = '
             </h2>
         </div>
         <div class="col-12 col-md-auto col-lg-4 p-3 p-lg-5 my-3 ">
-            <a href="https://undraw.co/" target="_blank" title="Check out unDraw!">
+            <a href="https://undraw.co/illustrations" target="_blank" title="Check out unDraw!">
                 <img src="/img/about-me.svg" alt="About me" class="img-fluid">
             </a>
         </div>
         <div class="col-12 col-lg-4">
             <p style="text-align: justify;">
-                <span lang="pl">Od ponad 5 lat tworzę witryny internetowe. Specjalizuję się w skryptach backend'owych, posługując się językami takimi jak PHP, MySQL czy Javascript. 
+                <span lang="pl">Od ponad 5 lat tworzę witryny internetowe. Specjalizuję się w skryptach backend'owych, posługując się językami takimi jak PHP, MySQL, Python czy Javascript. 
                 Mam również spore doświadczenie w tworzeniu i zarządzaniu aplikacjami opartymi na Wordpressie.</span>
-                <span lang="en">I have been creating websites for over 5 years. I specialize in backend scripts, using languages such as PHP, MySQL or Javascript. 
+                <span lang="en">I have been creating websites for over 5 years. I specialize in backend scripts, using languages such as PHP, MySQL, Python or Javascript. 
                 Additionally, I have a lot of experience in creating and managing applications based on Wordpress.</span>
             </p>
             <div class="row text-center justify-content-center my-5 py-0 gx-2">
                 <div class="col-4 col-md-4">
                     <h3><?php echo sprintf("%02d", $cProjects); ?></h3>
-                    <p lang="pl">Zakończonych<br> projektów</p>
-                    <p lang="en">Finished<br> projects</p>
+                    <p lang="pl">Zakończonych<br>projektów</p>
+                    <p lang="en">Finished<br>projects</p>
                 </div>
                 <div class="col-4 col-md-4">
                     <h3><?php echo sprintf("%02d", $cBackend); ?></h3>
-                    <p lang="pl">Systemy<br> backend'owe</p>
-                    <p lang="en">Backend<br> systems</p>
+                    <p lang="pl">Systemy<br>backend'owe</p>
+                    <p lang="en">Backend<br>systems</p>
                 </div>
                 <div class="col-4 col-md-4 text-center justify-content-center">
                     <h3><?php echo sprintf("%02d", $cManaged); ?></h3>
                     <p lang="pl">Zarządzanych<br> aplikacji</p>
-                    <p lang="en">Managed<br> applications</p>
+                    <p lang="en">Managed<br>applications</p>
                 </div>
             </div>   
         </div>
@@ -451,9 +452,9 @@ $linkImage = '
 </footer>
 
 <!-- Javascript -->
-<script src="js/language.js" async></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous" async></script>
+<script src="js/language.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 <script src="js/scripts.js"></script>
-<script type="module" src="js/swiper.js" defer></script>
+<script type="module" src="js/swiper.js" async></script>
 </body>
 </html>
