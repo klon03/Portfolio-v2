@@ -1,0 +1,364 @@
+html {
+  scroll-behavior: smooth !important;
+}
+html::-webkit-scrollbar {
+  background-color: #2c293d;
+  width: 12px;
+  border-radius: 10px;
+}
+html::-webkit-scrollbar-track {
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px #181626;
+}
+html::-webkit-scrollbar-thumb {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, #695dd8), color-stop(1, #695dd8));
+  border-radius: 10px;
+}
+
+body {
+  background-color: #181626 !important;
+  font-family: "Red Hat Display", sans-serif;
+  color: #bcbac3 !important;
+}
+
+::-moz-selection {
+  background: #695dd8;
+  color: white;
+}
+
+::selection {
+  background: #695dd8;
+  color: white;
+}
+
+:lang(en) {
+  display: none;
+}
+
+nav {
+  box-shadow: 0px 3px 10px 3px #181626;
+}
+
+.bg-dark {
+  background-color: #181626 !important;
+}
+
+.nav-link {
+  border-radius: 5px;
+}
+.nav-link.active, .nav-link:hover {
+  background-color: #2c293d;
+}
+.nav-link img {
+  border-radius: 25px;
+}
+.nav-link img:hover {
+  cursor: pointer;
+}
+
+.btn-wrapper {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (min-width: 992px) {
+  .btn-wrapper {
+    text-align: left !important;
+  }
+}
+.btn-wrapper a {
+  text-decoration: none;
+}
+
+.btn-primary { /* Safari */
+  display: flex; /* Safari 7.0+ */
+  align-items: center;
+  justify-content: center;
+  border-color: #695dd8 !important;
+  border-width: 2px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  color: #695dd8;
+}
+.btn-primary.main {
+  background: linear-gradient(to right, #695dd8 50%, #181626 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.btn-primary.alt {
+  background: linear-gradient(to right, #695dd8 50%, #211b46 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.btn-primary:hover {
+  background-position: left bottom;
+  color: white !important;
+}
+.btn-primary:hover svg {
+  fill: white;
+}
+.btn-primary:focus {
+  border-color: #595377;
+  box-shadow: 0 0 0 #595377 inset, 0 0 0 #595377;
+  outline: 0 none;
+  color: #695dd8;
+}
+.btn-primary:active {
+  border-color: #595377;
+  box-shadow: 0 0 0 #595377 inset, 0 0 0 #595377 !important;
+  outline: 0 none;
+  color: white;
+}
+.btn-primary svg {
+  fill: #695dd8;
+  padding-left: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+h1, h2, h3 {
+  color: #f2f1f3;
+  font-weight: 600;
+}
+
+a {
+  color: #695dd8;
+}
+
+#start.row {
+  min-height: 100vh;
+}
+#start.row .imgContainer {
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  height: 0;
+  padding-bottom: 80%;
+  width: 80%;
+}
+#start.row .imgContainer .imgBlur {
+  filter: blur(20px);
+}
+#start.row .imgContainer .imgBlur, #start.row .imgContainer .img {
+  background-image: url("../img/profile.webp");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#start.row .more {
+  position: absolute;
+  bottom: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: transform ease 300ms;
+  margin: auto;
+}
+#start.row .more:hover {
+  transform: translate(0, 5px);
+}
+#start.row .more:active {
+  transition: transform ease 100ms;
+  transform: translate(0, 10px);
+}
+#start.row .more a {
+  color: #695dd8;
+  fill: #695dd8;
+}
+#start.row .more a:hover {
+  fill: #695dd8;
+  filter: none;
+}
+
+.about-me img {
+  filter: drop-shadow(-1px -1px 0px #f2f2f2) drop-shadow(1px -1px 0px #f2f2f2) drop-shadow(1px 1px 0px #f2f2f2) drop-shadow(-1px 1px 0px #f2f2f2);
+}
+
+.skills .logos {
+  font-size: 5em;
+  color: #595377;
+}
+.skills .logos img {
+  width: 90%;
+  margin: 15% 0 15% 0;
+  transition: rotate 0.3s, scale 0.3s;
+}
+.skills .logos img:hover {
+  rotate: 5deg;
+  scale: 1.05;
+}
+
+.contact {
+  background: #2c293d;
+  box-shadow: 0px -20px 20px -20px #181626 inset, 0px 20px 20px -20px #181626 inset;
+}
+.contact svg {
+  fill: white;
+  width: 80px;
+  margin-right: 10px;
+}
+@media (max-width: 767px) {
+  .contact svg {
+    width: 60px;
+  }
+}
+.contact .tile {
+  border-radius: 5px;
+  transition: all 0.25s ease-in-out;
+  box-sizing: border-box;
+}
+@media (min-width: 992px) {
+  .contact .tile:hover {
+    background-color: #695dd8;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px 0px #181626;
+    cursor: pointer;
+  }
+}
+.contact .tile p {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.notification {
+  color: white;
+  background-color: rgba(3, 255, 16, 0.493);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  display: none;
+  position: fixed;
+  left: 50%;
+  bottom: 50px;
+  transform: translateX(-50%);
+  animation: flyUp 0.5s ease both;
+}
+.notification.show {
+  display: block;
+}
+.notification.hide {
+  animation: fadeout 0.5s ease both;
+}
+
+@keyframes flyUp {
+  from {
+    transform: translateX(-50%) translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+.swiper {
+  width: 100%;
+  padding-bottom: 10%;
+}
+@media (min-width: 992px) {
+  .swiper {
+    padding-bottom: 2%;
+  }
+}
+.swiper .swiper-pagination {
+  bottom: 0;
+}
+.swiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  background-color: #211b46;
+  border-radius: 5px;
+  max-width: 350px;
+  height: 500px;
+  padding: 20px;
+  text-align: center;
+}
+.swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 5px;
+}
+.swiper .swiper-slide h4 {
+  color: white;
+}
+.swiper .swiper-slide p {
+  text-align: justify;
+  font-size: 0.9rem;
+}
+.swiper .swiper-slide .btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.swiper .swiper-slide .overlay-container {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto 0.5rem auto;
+}
+.swiper .swiper-slide .overlay-container:hover .overlay {
+  opacity: 1;
+}
+.swiper .swiper-slide .overlay-container .overlay {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+  background-color: rgba(105, 93, 216, 0.5490196078);
+  transition: all 0.3s ease;
+}
+.swiper .swiper-slide .overlay-container .overlay svg {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: white;
+}
+.swiper .swiper-wrapper {
+  position: relative;
+}
+@media (min-width: 992px) {
+  .swiper .swiper-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 10%;
+    background: rgb(24, 22, 38);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#181626",endColorstr="#ffffff",GradientType=1);
+  }
+  .swiper .swiper-overlay.left {
+    left: 0;
+    background: linear-gradient(90deg, rgb(24, 22, 38) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  .swiper .swiper-overlay.right {
+    right: 0;
+    background: linear-gradient(270deg, rgb(24, 22, 38) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+}
+
+.row {
+  padding-top: 5rem;
+}
+@media (min-width: 992px) {
+  .row {
+    padding-bottom: 5rem;
+  }
+}/*# sourceMappingURL=style.css.map */
