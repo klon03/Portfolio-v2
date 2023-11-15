@@ -63,36 +63,14 @@ $portfolio = array(
         "isBackend" => true,
         "isManaged" => true,
     ),
-    "brutto" => array(
-        "title" => "Arena Brutto",
-        "year" => 2023,
-        "tech" => "Bootstrap",
-        "img" => "brutto",
-        "link" => "https://brutto.arena.pl/",
-        "descPL" => "Mała, jednostronicowa wizytówka osadzona na Bootstrapie. Wykonana według projektu graficznego zapewnionego przez klienta.",
-        "descEN" => "A small, one-page business card website based on Bootstrap. Created according to the graphic design provided by the client.",
-        "isBackend" => false,
-        "isManaged" => false,
-    ),
-    "pok" => array(
-        "title" => "Arena POK",
-        "year" => 2023,
-        "tech" => "Bootstrap",
-        "img" => "pok",
-        "link" => "https://pok.arena.pl/",
-        "descPL" => "Mała, jednostronicowa wizytówka osadzona na Bootstrapie. Wykonana według projektu graficznego zapewnionego przez klienta.",
-        "descEN" => "A small, one-page business card website based on Bootstrap. Created according to the graphic design provided by the client.",
-        "isBackend" => false,
-        "isManaged" => false,
-    ),
     "sprzedawcy" => array(
-        "title" => "Arena Sprzedawcy",
+        "title" => "Arena Sprzedawcy, BOK, Brutto",
         "year" => 2023,
         "tech" => "Bootstrap",
         "img" => "sprzedawcy",
         "link" => "https://sprzedawcy.arena.pl/",
-        "descPL" => "Mała, jednostronicowa wizytówka osadzona na Bootstrapie. Wykonana według projektu graficznego zapewnionego przez klienta.",
-        "descEN" => "A small, one-page business card website based on Bootstrap. Created according to the graphic design provided by the client.",
+        "descPL" => "Wykonałem trzy landing-page'e osadzone w Bootstrapie. Wykonane według projektu graficznego zapewnionego przez klienta.",
+        "descEN" => "Three landing pages based on Bootstrap. Created according to the graphic design provided by the client.",
         "isBackend" => false,
         "isManaged" => false,
     ),
@@ -121,7 +99,7 @@ $portfolio = array(
 );
 $portfolio = array_reverse($portfolio);
 usort($portfolio, fn($a, $b) => $b['year'] - $a['year'] );
-$cProjects = count($portfolio);
+$cProjects = count($portfolio) + 2;
 $cBackend = countTrueValues($portfolio, 'isBackend');
 $cManaged = countTrueValues($portfolio, 'isManaged');
 
